@@ -16,7 +16,11 @@ const Header = () => {
           </Nav>
           
           <Nav>
-          <Nav.Link className='text-white ' as={Link} to="/blog">Blog</Nav.Link>
+          <Nav.Link className='text-white ' as={Link} to="/">Home</Nav.Link>
+          <Nav.Link className='text-white ' as={Link} to="/product">Product</Nav.Link>
+          <Nav.Link className='text-white ' as={Link} to="/portfolio">Portfolio</Nav.Link>
+          <Nav.Link className='text-white ' as={Link} to="/about">About</Nav.Link>
+          <Nav.Link className='text-white ' as={Link} to="/login">Login</Nav.Link>
             
           </Nav>
           <Nav>

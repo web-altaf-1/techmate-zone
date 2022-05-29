@@ -7,12 +7,12 @@ const Banner = () => {
         <div>
             <div className="banner">
                 <div className="image">
-                    <img src="https://i.ibb.co/z5h61J7/1a-bmw-wanchaishowroom-finedata-1.png" alt="" />
+                    <img src="https://i.ibb.co/qs74Pyk/computer-repair-shop-circuit-boards-and-computer-parts-EFR8-G8.png" alt="" />
                 </div>
-                <div className="details">
-                    <h1>The New Comfort Zone </h1>
+                <div className="details ">
+                    <h1 className=''>The New Comfort Zone </h1>
                     <h1>Unveiling Soon.</h1>
-                    <p>The new C-Class.</p>
+                    <button className='btn btn-primary rounded px-3 text-center'>Get Started</button>
                 </div>
 
             </div>

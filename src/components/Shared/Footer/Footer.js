@@ -10,7 +10,7 @@ const Footer = () => {
 
                 <div className="footer-left">
 
-                    <h3>Carvana <span>Worcester</span></h3>
+                    <h3>TechMate <span>Zone</span></h3>
 
                     <p className="footer-links">
                         <Nav.Link style={{ padding: '0' }} as={Link} eventKey={1} to="/">Home</Nav.Link>
