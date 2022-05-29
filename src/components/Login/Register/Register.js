@@ -1,31 +1,46 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
+    const navigate = useNavigate();
+    let passwordError;
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth);
 
-    const handleCreateUser = event =>{
+
+    const [updateProfile, updating, error1] = useUpdateProfile(auth);
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+
+    const pp = 'a';
+
+    const handleCreateUser = event => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        createUserWithEmailAndPassword(email,password)
-        
-        if(user){
-            
-        }
+        createUserWithEmailAndPassword(email, password);
+
+        toast('User Successfully created')
+
+        navigate('/');
+
     }
-    
-    
+
+
     return (
         <div className=''>
             <h2 className='text-center text-primary my-3'>Please Register</h2>
@@ -53,9 +68,10 @@ const Register = () => {
                 <br />
                 <Form.Label className='mt-2'>Already Have an Account ??
                 </Form.Label>
-                <Link  style={{ marginLeft: '5px' }} to='/login'>Please Login</Link>
+                <Link style={{ marginLeft: '5px' }} to='/login'>Please Login</Link>
                 <br />
             </Form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

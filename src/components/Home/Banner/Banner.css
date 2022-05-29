@@ -26,3 +26,22 @@
     font-weight: 300;
     margin-top: 50px;
 }
+
+.get-started-btn{
+    padding: 13px 17px;
+    text-align: center;
+    border-radius: 9px;
+    border: 1px solid #00007a;
+    margin-left: 3px;
+    background-color: #000021;
+    color: white;
+}
+
+.get-started-btn:hover{
+    padding: 13px 17px;
+    text-align: center;
+    border-radius: 9px;
+    margin-left: 3px;
+    background-color: #00007a;
+    color: white;
+}

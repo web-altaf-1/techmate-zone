@@ -12,7 +12,7 @@ const Banner = () => {
                 <div className="details ">
                     <h1 className=''>The New Comfort Zone </h1>
                     <h1>Unveiling Soon.</h1>
-                    <button className='btn btn-primary rounded px-3 text-center'>Get Started</button>
+                    <button className='get-started-btn'>Get Started</button>
                 </div>
 
             </div>

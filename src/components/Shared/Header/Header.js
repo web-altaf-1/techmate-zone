@@ -8,6 +8,7 @@ import './Header.css';
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
+  console.log(user);
 
   const handleSignOut = event =>{
     signOut(auth)
@@ -24,19 +25,20 @@ const Header = () => {
           </Nav>
           
           <Nav>
-          <Nav.Link className='text-white ' as={Link} to="/">Home</Nav.Link>
-          <Nav.Link className='text-white ' as={Link} to="/product">Product</Nav.Link>
-          <Nav.Link className='text-white ' as={Link} to="/portfolio">Portfolio</Nav.Link>
-          <Nav.Link className='text-white ' as={Link} to="/about">About</Nav.Link>
+            
+          <Nav.Link className='text-white text-center ' as={Link} to="/">Home</Nav.Link>
+          <Nav.Link className='text-white text-center' as={Link} to="/products">Products</Nav.Link>
+          <Nav.Link className='text-white text-center' as={Link} to="/portfolio">Portfolio</Nav.Link>
+          <Nav.Link className='text-white text-center' as={Link} to="/about">About</Nav.Link>
           {
-              user ? <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Log Out</button> : <Nav.Link className='text-white ' as={Link} to="login">
+              user ? <button className='btn text-white text-decoration-none' onClick={handleSignOut}>Log Out</button> : <Nav.Link className='text-white ' as={Link} to="login">
                 Login
               </Nav.Link>
             }
             
           </Nav>
           <Nav>
-            
+            <span>{user?.displayName && user?.displayName}</span>
           </Nav>
           <Nav>
             

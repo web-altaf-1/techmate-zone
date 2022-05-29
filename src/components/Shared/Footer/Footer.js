@@ -15,14 +15,14 @@ const Footer = () => {
                     <p className="footer-links">
                         <Nav.Link style={{ padding: '0' }} as={Link} eventKey={1} to="/">Home</Nav.Link>
 
-                        <Nav.Link style={{ padding: '0' }} as={Link} eventKey={2} to="/inventory">Inventory</Nav.Link>
+                        <Nav.Link style={{ padding: '0' }} as={Link} eventKey={2} to="/products">Products</Nav.Link>
 
-                        <Nav.Link style={{ padding: '0' }} as={Link} eventKey={4} to="/addItems">Add Items Us</Nav.Link>
+                        <Nav.Link style={{ padding: '0' }} as={Link} eventKey={4} to="/portfolio">Portfolio</Nav.Link>
 
-                        <Nav.Link style={{ padding: '0' }} as={Link} eventKey={5} to="/myItems">My Items</Nav.Link>
+                        <Nav.Link style={{ padding: '0' }} as={Link} eventKey={5} to="/dashboard">My Dashboard</Nav.Link>
                     </p>
 
-                    <p className="footer-company-name text-white"> Carvana Worcester © {new Date().getFullYear()}</p>
+                    <p className="footer-company-name text-white"> TechMate Zone {new Date().getFullYear()}</p>
                 </div>
 
                 <div className="footer-center">
@@ -39,7 +39,7 @@ const Footer = () => {
 
                     <div>
                         <i className="fa fa-envelope"></i>
-                        <p><a className="text-white " href="mailto:support@company.com">support@carvana.com</a></p>
+                        <p><a className="text-white " href="mailto:support@company.com">support@techmate.com</a></p>
                     </div>
 
                 </div>
@@ -48,7 +48,7 @@ const Footer = () => {
 
                     <p className="footer-company-about text-white">
                         <span>About the company</span>
-                        Through a user-friendly and intuitive interface, Clarus WMS gives you all the tools you need to significantly improve your warehouse operations.
+                        Through a user-friendly and intuitive interface, Techmate gives you all the tools you need to significantly improve your building operations.
                     </p>
 
                     <div className="footer-icons">
