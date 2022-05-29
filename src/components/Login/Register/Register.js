@@ -1,20 +1,42 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
+    const handleCreateUser = event =>{
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        createUserWithEmailAndPassword(email,password)
+        
+        if(user){
+            
+        }
+    }
+    
     
     return (
         <div className=''>
             <h2 className='text-center text-primary my-3'>Please Register</h2>
-            <Form className='w-50 mx-auto shadow-lg p-5 bg-white mb-5' >
+            <Form onSubmit={handleCreateUser} className='w-50 mx-auto shadow-lg p-5 bg-white mb-5' >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Your Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter Your Name" name='name' autoComplete='off' required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" name='email' autoComplete='off' required />
+                    <Form.Control type="email" placeholder="Enter email" name='email' autoComplete='on' required />
                 </Form.Group>
 
 
