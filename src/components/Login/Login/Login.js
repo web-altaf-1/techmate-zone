@@ -20,7 +20,7 @@ const Login = () => {
 
     let from = location.state?.from?.pathname || "/";
 
-    if (loading) {
+    if (loading ) {
         return <Loading></Loading>
     }
     if (user) {
