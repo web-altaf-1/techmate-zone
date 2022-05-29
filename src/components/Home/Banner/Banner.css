@@ -1,0 +1,28 @@
+.image img {
+    height: 100vh;
+    max-width: 100%;
+    padding: 0 auto;
+    width: 100%;
+}
+.details{
+    color: #fff;
+    font-weight: 500;
+    left: 95px;
+    line-height: 1;
+    position: absolute;
+    text-align: left;
+    top: 150px;
+    z-index: 1;
+}
+
+.details h1 {
+    font-family: BenchNine,sans-serif;
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+
+.details p {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-top: 50px;
+}
