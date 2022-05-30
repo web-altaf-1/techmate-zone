@@ -2,6 +2,7 @@ import React from 'react';
 
 const ConfirmPurchage = () => {
     
+
     return (
         <div>
             

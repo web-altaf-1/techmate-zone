@@ -1,20 +1,20 @@
 [
     {
         "id": 1,
-        "name": "ENGINE DIAGNOSTIC",
+        "name": "RdX CHIPSET 3R",
         "price": "300",
         "minOrder": "25",
         "available": "125",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Revolutionize large file handling and response times with HP PCIe NVME TLC 120GB SSD M.2 Drive, a remarkably affordable and innovative PCIe-based NVMe memory SSD storage solution.",
         "img": "https://i.ibb.co/zmSsrs1/part1.png"
     },
     {
         "id": 2,
-        "name": "WHEEL ALIGNMENT",
+        "name": "GIGABYTE MOTHERBOARD",
         "price": "100",
         "minOrder": "25",
         "available": "164",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Revolutionize large file handling and response times with HP PCIe NVME TLC 120GB SSD M.2 Drive, a remarkably affordable and innovative PCIe-based NVMe memory SSD storage solution.",
         "img": "https://i.ibb.co/2Sx4xcZ/parts2.png"
     },
     {
