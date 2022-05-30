@@ -8,7 +8,8 @@ import './Header.css';
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
-  console.log(user);
+
+
 
   const handleSignOut = event => {
     signOut(auth)
@@ -28,22 +29,27 @@ const Header = () => {
 
             <Nav.Link className='text-white text-center ' as={Link} to="/">Home</Nav.Link>
             <Nav.Link className='text-white text-center' as={Link} to="/products">Products</Nav.Link>
-            <Nav.Link className='text-white text-center' as={Link} to="/portfolio">Portfolio</Nav.Link>
+            <Nav.Link className='text-white text-center' as={Link} to="/blogs">Blogs</Nav.Link>
             <Nav.Link className='text-white text-center' as={Link} to="/about">About</Nav.Link>
-            {user ?
-              <span className="px-4 user-name text-white d-flex align-items-center fw-bold">
-                Hello, {user?.displayName}
-              </span> : <></>}
-
-
-          </Nav>
-
-          <Nav>
+            {user ? <Nav.Link className='text-white text-center' as={Link} to="/portfolio">Portfolio</Nav.Link> : <></>}
+            {
+              user ? <Nav.Link className='text-white text-center' as={Link} to="/dashboard">Dashboard</Nav.Link> : <></>
+            }
             {
               user ? <button className='btn text-white text-decoration-none' onClick={handleSignOut}>Log Out</button> : <Nav.Link className='text-white ' as={Link} to="login">
                 Login
               </Nav.Link>
             }
+          </Nav>
+
+          <Nav>
+            
+
+            {user ?
+              <span style={{ border: '1px solid white' }} className="px-4 user-name text-white d-flex  align-items-center fw-bold shadow-lg">
+                Hello, {user?.displayName ? user.displayName.split(' ')[1] : 'User'}
+              </span> : <></>}
+              
           </Nav>
 
           <Nav>

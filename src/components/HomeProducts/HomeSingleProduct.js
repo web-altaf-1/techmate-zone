@@ -9,7 +9,7 @@ const HomeSingleProduct = (props) => {
         navigate('/confirmPurchage')
     }
     return (
-        <Card>
+        <Card className='shadow-lg'>
             <Card.Img className='d-flex mx-auto w-75
             ' style={{ width: '200px', height: 'auto' }} variant="top" src={img} />
             <Card.Body>

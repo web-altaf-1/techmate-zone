@@ -6,18 +6,26 @@ import './Products.css';
 
 const Products = () => {
     const [products,setProducts,isLoading] = UseProducts();
+    const a = '2';
     return (
         <div className=''>
             <h2 className='text-center pt-5'>All Products </h2>
-            <div className='products-container p-5'>
+            {
+                isLoading? <div>
+                {<Loading></Loading>}
+    
+                </div> : <div className='products-container p-5'>
                 {
-                    isLoading? <Loading></Loading> : products.map(product => <Product
+                    products.map(product => <Product
                         key={product._id}
                         product={product}
                     ></Product>)
 
                 }
             </div>
+            }
+            
+            
         </div>
     );
 };

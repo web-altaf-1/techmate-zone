@@ -5,6 +5,7 @@ import './Login.css';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -28,7 +29,8 @@ const Login = () => {
     }
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error.message}</p>
+        toast(`Error : ${error.message}`)
+        // errorElement = <p className='text-danger'>Error: {error.message}</p>
     };
 
     const handleSubmit = event => {
@@ -56,7 +58,7 @@ const Login = () => {
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="I agree with terms And conditions" required />
                     </Form.Group>
-                    {errorElement}
+                    
                     <Button variant="primary" type="submit">
                         Login
                     </Button>
@@ -70,7 +72,7 @@ const Login = () => {
 
                 {/* social login here */}
             </div>
-
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
