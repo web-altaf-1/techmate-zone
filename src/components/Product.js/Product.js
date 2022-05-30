@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 const Product = (props) => {
     const navigate = useNavigate();
     const { _id, name , img,description , price ,minOrder ,available} = props.product;
-    const handleConfirmOrder= _id =>{
-        navigate('/confirmPurchage')
+    const handleConfirmOrder= id =>{
+        navigate(`/confirmPurchage/${id}`)
     }
     return (
         <Card>

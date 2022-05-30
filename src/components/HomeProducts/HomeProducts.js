@@ -4,6 +4,7 @@ import './HomeProducts.css';
 import HomeSingleProduct from './HomeSingleProduct';
 
 const HomeProducts = () => {
+    // custom hooks
     const [products, setProducts] = UseProducts();
 
 

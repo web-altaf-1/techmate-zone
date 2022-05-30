@@ -7,6 +7,7 @@ const Banner = () => {
         <div>
             <div className="banner">
                 <div className="image">
+                    
                     <img src="https://i.ibb.co/qs74Pyk/computer-repair-shop-circuit-boards-and-computer-parts-EFR8-G8.png" alt="" />
                 </div>
                 <div className="details ">

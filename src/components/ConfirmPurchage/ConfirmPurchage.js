@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const ConfirmPurchage = () => {
 
@@ -27,14 +30,23 @@ const ConfirmPurchage = () => {
             .then(data => setParts(data))
     }, [id])
 
+    // loading 
+
     if (loading) {
         return <Loading></Loading>
     }
 
+    // hadle purchage confirm
+
     const handleSubmit = (event) => {
         event.preventDefault();
         if (phoneNumber && address) {
-
+            toast('Order Place Succesfully');
+            setPhoneNumber('')
+            setAddress('');
+        }
+        else{
+            toast.error('Please Fill up this form ')
         }
     }
 
@@ -147,6 +159,8 @@ const ConfirmPurchage = () => {
 
                 </button>
             </div>
+
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

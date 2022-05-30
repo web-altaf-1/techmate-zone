@@ -4,8 +4,12 @@ import { useNavigate } from 'react-router-dom';
 
 const HomeSingleProduct = (props) => {
     const navigate = useNavigate();
+
+    //distracturing 
     const {_id,name,price,description,available,minOrder,img} = props.product;
+    //hadle confirm order
     const handleConfirmOrder= id =>{
+        // navigate to confirm purchage 
         navigate(`/confirmPurchage/${id}`)
     }
     return (

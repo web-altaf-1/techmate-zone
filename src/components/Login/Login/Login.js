@@ -11,6 +11,8 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
+
+    // react firebase hooks
     const [
         signInWithEmailAndPassword,
         user,
@@ -22,6 +24,8 @@ const Login = () => {
 
     let from = location.state?.from?.pathname || "/";
 
+    // loading 
+
     if (loading ) {
         return <Loading></Loading>
     }
@@ -29,10 +33,13 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
+    // error
     if (error) {
         toast(`Error : ${error.message}`)
         // errorElement = <p className='text-danger'>Error: {error.message}</p>
     };
+
+    // sign in with email and pass
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -71,6 +78,7 @@ const Login = () => {
 
                 </Form>
 
+                {/* social media login system */}
                 <SocialMedia></SocialMedia>
             </div>
             <ToastContainer></ToastContainer>
