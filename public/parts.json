@@ -3,42 +3,54 @@
         "id": 1,
         "name": "ENGINE DIAGNOSTIC",
         "price": "300",
+        "minOrder": "25",
+        "available": "125",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/XY4G9qF/images-4.jpg"
+        "img": "https://i.ibb.co/zmSsrs1/part1.png"
     },
     {
         "id": 2,
         "name": "WHEEL ALIGNMENT",
         "price": "100",
+        "minOrder": "25",
+        "available": "164",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "img": "https://i.ibb.co/2Sx4xcZ/parts2.png"
     },
     {
         "id": 3,
-        "name": "OIL CHANGING",
+        "name": "ASUS GeForce RTX 3070",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "minOrder": "25",
+        "available": "225",
+        "description": "The ASUS GeForce RTX 3070 Noctua OC Edition 8GB GDDR6 Graphics Card is the first graphics card to feature Noctua fans and a heatsink that has been co-engineered by Noctua.",
+        "img": "https://i.ibb.co/tCPqN9f/parts3.png"
     },
     {
         "id": 4,
-        "name": "BRAKE REPARING",
+        "name": "HP EX900 M.2 SSD",
         "price": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+        "minOrder": "25",
+        "available": "115",
+        "description": "Revolutionize large file handling and response times with HP PCIe NVME TLC 120GB SSD M.2 Drive, a remarkably affordable and innovative PCIe-based NVMe memory SSD storage solution.",
+        "img": "https://i.ibb.co/cY5f0wF/parts4.png"
     },
     {
         "id": 5,
-        "name": "WASH AND GLASSING",
+        "name": "1stPlayer FK 300W Power Supply",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+        "minOrder": "25",
+        "available": "128",
+        "description": "1stPlayer FK 300W comes with Double Forward + APFC (4.0 PPFC), EFF. high as 85% under typical loading. This power supply is the Perfect combination of cooling and silent with 12CM Hydraulic, Bearing fan.",
+        "img": "https://i.ibb.co/kmKDmYc/fk-300w-01-500x500.png"
     },
     {
         "id": 6,
-        "name": "COMPLETE ANALYSIS",
+        "name": "TOTOLINK PX1000 Gigabit PCIE LAN Card",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+        "minOrder": "25",
+        "available": "165",
+        "description": "Gigabit PCIE Network Adapter, 1x 10/100/1000Mbps Ethernet port, PCI-E connector,Supports IEEE802.3 & full duplex flow control",
+        "img": "https://i.ibb.co/WkWrJQz/totolink.png"
     }
 ]

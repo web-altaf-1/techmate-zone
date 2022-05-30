@@ -10,42 +10,43 @@ const Header = () => {
   const [user, loading, error] = useAuthState(auth);
   console.log(user);
 
-  const handleSignOut = event =>{
+  const handleSignOut = event => {
     signOut(auth)
   }
-  
+
   return (
     <Navbar className='navbar-style' sticky='top' collapseOnSelect expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand  as={Link} to="/"><h3>TechMate Zone</h3> </Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><h3>TechMate Zone</h3> </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
 
           </Nav>
-          
+
+          <Nav >
+
+            <Nav.Link className='text-white text-center ' as={Link} to="/">Home</Nav.Link>
+            <Nav.Link className='text-white text-center' as={Link} to="/products">Products</Nav.Link>
+            <Nav.Link className='text-white text-center' as={Link} to="/portfolio">Portfolio</Nav.Link>
+            <Nav.Link className='text-white text-center' as={Link} to="/about">About</Nav.Link>
+            {user ?
+              <span className="px-4 user-name text-white d-flex align-items-center fw-bold">
+                Hello, {user?.displayName}
+              </span> : <></>}
+
+
+          </Nav>
+
           <Nav>
-            
-          <Nav.Link className='text-white text-center ' as={Link} to="/">Home</Nav.Link>
-          <Nav.Link className='text-white text-center' as={Link} to="/products">Products</Nav.Link>
-          <Nav.Link className='text-white text-center' as={Link} to="/portfolio">Portfolio</Nav.Link>
-          <Nav.Link className='text-white text-center' as={Link} to="/about">About</Nav.Link>
-          {
+            {
               user ? <button className='btn text-white text-decoration-none' onClick={handleSignOut}>Log Out</button> : <Nav.Link className='text-white ' as={Link} to="login">
                 Login
               </Nav.Link>
             }
-            
-          </Nav>
-          <Nav>
-            <span>{user?.displayName && user?.displayName}</span>
-          </Nav>
-          <Nav>
-            
           </Nav>
 
           <Nav>
-
           </Nav>
         </Navbar.Collapse>
       </Container>

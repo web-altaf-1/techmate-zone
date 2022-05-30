@@ -26,14 +26,14 @@ const Register = () => {
 
     const pp = 'a';
 
-    const handleCreateUser = event => {
+    const handleCreateUser = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        createUserWithEmailAndPassword(email, password);
-
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
         toast('User Successfully created')
 
         navigate('/');

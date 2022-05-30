@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import UseProducts from '../../hooks/UseProducts';
 import Product from '../Product.js/Product';
 import './Products.css';
 
 const Products = () => {
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        fetch('parts.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    const [products,setProducts] = UseProducts();
     return (
         <div className=''>
             <h2 className='text-center pt-5'>All Products </h2>

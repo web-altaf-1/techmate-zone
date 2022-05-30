@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import ConfirmPurchage from './components/ConfirmPurchage/ConfirmPurchage';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/products' element={<Products/>}></Route>
+        <Route path='/confirmPurchage' element={<ConfirmPurchage/>}></Route>
         
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
