@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 const HomeSingleProduct = (props) => {
     const navigate = useNavigate();
     const {_id,name,price,description,available,minOrder,img} = props.product;
-    const handleConfirmOrder= _id =>{
-        navigate('/confirmPurchage')
+    const handleConfirmOrder= id =>{
+        navigate(`/confirmPurchage/${id}`)
     }
     return (
         <Card className='shadow-lg'>

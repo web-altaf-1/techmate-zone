@@ -30,7 +30,7 @@ function App() {
         
         <Route path='/dashboard' element={<Dashboard/>}></Route>
         <Route path='/portfolio' element={<Portfolio/>}></Route>
-        <Route path='/confirmPurchage' element={<ConfirmPurchage/>}></Route>
+        <Route path='/confirmPurchage/:id' element={<RequireAuth><ConfirmPurchage/></RequireAuth>}></Route>
 
 
         
