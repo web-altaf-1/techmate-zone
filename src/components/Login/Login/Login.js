@@ -6,6 +6,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import { toast, ToastContainer } from 'react-toastify';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -70,7 +71,7 @@ const Login = () => {
 
                 </Form>
 
-                {/* social login here */}
+                <SocialMedia></SocialMedia>
             </div>
             <ToastContainer></ToastContainer>
         </div>
