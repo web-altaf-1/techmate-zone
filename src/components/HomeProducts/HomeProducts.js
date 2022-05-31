@@ -11,7 +11,7 @@ const HomeProducts = () => {
     return (
         <div>
             <h2 className='text-center py-3 my-2 fw-bold'>Our Products</h2>
-            <div className='home-products mx-3 mb-3 rounded-3'>
+            <div className='home-products mx-3 mb-3 rounded-3 '>
                 {
                     products.slice(0,6).map((product,index) => <HomeSingleProduct
                         key={index}
