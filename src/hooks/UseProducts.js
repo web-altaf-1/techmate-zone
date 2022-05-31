@@ -8,7 +8,7 @@ const UseProducts = (reload, reloadModal) => {
 
     useEffect(() => {
         isSetLoading(true)
-        fetch('http://localhost:5000/products')
+        fetch('https://agile-oasis-94164.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);

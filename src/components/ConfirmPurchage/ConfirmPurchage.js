@@ -24,7 +24,7 @@ const ConfirmPurchage = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://agile-oasis-94164.herokuapp.com/products/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setParts(data))
